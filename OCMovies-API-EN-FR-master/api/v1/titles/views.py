@@ -26,7 +26,7 @@ class MovieTitleListView(generics.ListAPIView):
     identified with the `url` field.
 
     If you need to get a full list of available genres, refer to the [genres
-    endpoint](/OCMovies-API-EN-FR-master/v1/genres/).
+    endpoint](/api/v1/genres/).
 
     """
 
@@ -48,14 +48,14 @@ class MovieTitleDetailView(generics.RetrieveAPIView):
     the server. It uses data from more than 80k movies from de IMDb website.
 
     Not all the detailed data is present in the [title list endpoint available
-    here](/OCMovies-API-EN-FR-master/v1/titles/). Only the detailed information provided on the
+    here](/api/v1/titles/). Only the detailed information provided on the
     current endpoint gives access to e.g. the description, long description
     or buget and income info about the movie.
 
     If you need to get a full list of available genres, refer to the [genres
-    endpoint](/OCMovies-API-EN-FR-master/v1/genres/).
+    endpoint](/api/v1/genres/).
 
-    Please, refer to the [title list endpoint](/OCMovies-API-EN-FR-master/v1/titles/) to get various
+    Please, refer to the [title list endpoint](/api/v1/titles/) to get various
     search or sort capabilities, thereby allowing to efficiently identify the
     movies you want to look at.
 

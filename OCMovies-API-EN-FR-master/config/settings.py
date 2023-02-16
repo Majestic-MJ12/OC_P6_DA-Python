@@ -40,8 +40,8 @@ THIRD_PARTY_APPS = [
 
 PROJECT_APPS = [
     'movies.apps.MoviesConfig',
-    'OCMovies-API-EN-FR-master.v1.genres.apps.GenresConfig',
-    'OCMovies-API-EN-FR-master.v1.titles.apps.TitlesConfig',
+    'api.v1.genres.apps.GenresConfig',
+    'api.v1.titles.apps.TitlesConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS

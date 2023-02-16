@@ -14,7 +14,7 @@ class GenreListView(generics.ListAPIView):
 
     The get a list of movies filtered by genre, identify those of interest
     for you and use them to filter movies on the
-    [main titles entry point here](/OCMovies-API-EN-FR-master/v1/titles/).
+    [main titles entry point here](/api/v1/titles/).
 
     """
 
