@@ -1,58 +1,177 @@
 <!DOCTYPE html>
-<!-- The language -->
-
+<!--The language-->
 <html lang="en">
-<!-- The head -->
 
 <head>
-  <!-- The head -->
+    <!--Provides general information (metadata) about the document-->
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--Information about the nature and content of a web page-->
   <link href="img/favicon-32x32.png" rel="icon"/>
   <link href="css_js/css_main.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!--Link element to external resources-->
   <title>P6_JustStreamIt</title>
+    <!--Element that defines the title of the document-->
 </head>
 
  <body>
- <!-- The body -->
+ <!--Represents the main content of the document-->
+
         <header class="header_header">
-           <!-- The body header-->
+           <!--Represents introductory content-->
             <div class="header_header-logo">
-               <!-- Content division -->
+               <!--Content division-->
                 <a href="index.html"><img src="img/favicon-32x32.png" alt="header_website-logo"></a>
-               <!-- Link -->
+               <!--Creates a hyperlink to web pages, files,...-->
             </div>
             <nav class="header_header_menu">
-               <!-- Header navigation bar -->
+               <!--Represents a section of a page that has links to other pages-->
                 <ul class="header_navigation-bar">
-                   <!-- Bulleted list -->
+                   <!--Create a bulleted list-->
                     <li class="header_nav-bar"><a href="index.html">Home</a></li>
                     <li class="header_nav-bar"><a href="#categories">Categories</a></li>
+                    <!--Represent an item in a list-->
                 </ul>
             </nav>
         </header>
 
          <section class="best_best" id="best_best-movie">
-           <!--Represents a generic section -->
+             <!--need to think how to go left/right with the buttons!!!-->
+             <!--Represents a generic section of a document (here: the best movie section)-->
             <div class="best_best-cover" id="best_best-top0">
-              <!-- Content division -->
+                <!--Content division-->
                 <img src="img/best_best.png" alt="best_best-movie-cover">
+                <!--Allows to embed an image in a document-->
             </div>
             <div class="best_of_best-movie">
-              <!-- Content division -->
+                <!--Content division-->
                 <h1 class="best_best-movie-title" id="top-title">""</h1>
+                <!--HTML tag that indicates a title on a website-->
             </div>
             <div class="best_best-buttons">
-              <!-- Content division -->
+              <!--Content division-->
                 <button class="best_best-button"><!-- !!! --></button>
                 <button class="best_best-button"><!-- !!! --></button>
+                <!--Represents a clickable button-->
             </div>
             <div class="best_best-movie-description">
+                <!--Content division-->
                 <p class="best_best-desc" id="best_best-top-desc">""</p>
+                <!--Represents a paragraph of text-->
             </div>
         </section>
 
+        <section class="categories_categories" id="categories_categories">
+            <!--Represents a generic section of a document (here: Highest Rated Movies, this area displays the 7 highest rated movies across all categories-->
+            <!-- need to think how to go left/right with the buttons!!! -->
+            <div class="categories_categories-container">
+                <!--Content division-->
+                <h2>Best-rated movies</h2>
+                <!--HTML tag that indicates a title on a website-->
+                <div class="categories_categories-carrousel-container">
+                    <div class="categories_categories-carrousel-content" id="categories_categories-best-movies">
+                        <div class="categories_categories-box" id="categories_categories-1">
+                            <!--Content division-->
+                            <img src="img/testing_img" alt="categories_categories-movie-cover">
+                            <!--Allows to embed an image in a document-->
+                            <div class= "categories_categories-overlay">
+                                <!--Content division-->
+                                <p>Movie 1</p>
+                                <!--Represents a paragraph of text-->
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <button class= "categories_categories-overlay-button" ><!-- !!! --></button>
+                                <!--Represents a clickable button-->
+                            </div>
+                        </div>
+                        <div class="categories_categories-box" id="categories_categories-2">
+                            <!--Content division-->
+                            <img src="img/testing_img.png" alt="movie cover">
+                            <!--Allows to embed an image in a document-->
+                            <div class= "categories_categories-overlay">
+                                <!--Content division-->
+                                <p>Movie 2</p>
+                                <!--Represents a paragraph of text-->
+                                <button class= "categories_categories-overlay-button">><!-- !!! --></button>
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <!--Represents a clickable button-->
+                            </div>
+                        </div>
+                        <div class="categories_categories-box" id="categories_categories-3">
+                            <!--Content division-->
+                            <img src="img/testing_img.png" alt="movie cover">
+                            <!--Allows to embed an image in a document-->
+                            <div class= "categories_categories-overlay">
+                                <!--Content division-->
+                                <p>Movie 3</p>
+                                <!--Represents a paragraph of text-->
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <!--Represents a clickable button-->
+                            </div>
+                        </div>
+                        <div class="categories_categories-box" id="categories_categories-4">
+                            <!--Content division-->
+                            <img src="img/testing_img.png" alt="movie cover">
+                            <!--Allows to embed an image in a document-->
+                            <div class= "categories_categories-overlay">
+                                <!--Content division-->
+                                <p>Movie 4</p>
+                                <!--Represents a paragraph of text-->
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <!--Represents a clickable button-->
+                            </div>
+                        </div>
+                        <div class="categories_categories-box" id="categories_categories-5">
+                            <!--Content division-->
+                            <img src="img/testing_img.png" alt="movie cover">
+                            <!--Allows to embed an image in a document-->
+                            <div class= "categories_categories-overlay">
+                                <!--Content division-->
+                                <p>Movie 5</p>
+                                <!--Represents a paragraph of text-->
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <!--Represents a clickable button-->
+                            </div>
+                        </div>
+                        <div class="categories_categories-box" id="categories_categories-6">
+                            <!--Content division-->
+                            <img src="img/testing_img.png" alt="movie cover">
+                            <!--Allows to embed an image in a document-->
+                            <div class= "categories_categories-overlay">
+                                <!--Content division-->
+                                <p>Movie 6</p>
+                                <!--Represents a paragraph of text-->
+                                <button class= "overlay-button"><!-- !!! --></button>
+                                <button class= "overlay-button"><!-- !!! --></button>
+                                <!--Represents a clickable button-->
+                            </div>
+                        </div>
+                        <div class="categories_categories-box" id="categories_categories-7">
+                            <!--Content division-->
+                            <img src="img/testing_img.png" alt="movie cover">
+                            <!--Allows to embed an image in a document-->
+                            <div class= "categories_categories-overlay">
+                                <!--Content division-->
+                                <p>Movie 7</p>
+                                <!--Represents a paragraph of text-->
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <button class= "categories_categories-overlay-button"><!-- !!! --></button>
+                                <!--Represents a clickable button-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="categories_categories-controls">
+                        <!--Content division-->
+                        <button class="categories_categories-button-left" id="categories_categories-best-left"><!-- !!! --></button>
+                        <button class="categories_categories-button-right" id="categories_categories-best-right"><!-- !!! --></button>
+                        <!--Represents a clickable button-->
+                    </div>
+                </div>
+            </div>
+        </section>
