@@ -1,15 +1,19 @@
-html
+
+html/* The html part */
+
 {
 	scroll-behavior: smooth;
 }
 
-body
+body/* The body part */
+
 {
-  background-color: #141414;
-  color: white;
+	background-color: #141414;
+	color: white;
 }
 
-button
+button/* The button part */
+
 {
 	background-color: #E50914;
 	color: white;
@@ -20,15 +24,27 @@ button
 	transition: all 0.2s;
 }
 
-button:hover
+button:hover/* The button part */
+
 {
 	background-color: #B20710;
 	border: none;
 	color: white;
 }
 
-/* Header */
-.header_header
+footer/* The footer part */
+
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #111111;
+	color: #ffffff;
+	padding: 20px;
+}
+
+.header_header/* The header part */
+
 {
 	align-items: center;
 	background: linear-gradient(#000000, transparent);
@@ -40,22 +56,25 @@ button:hover
 	font-family: "Netflix Sans", sans-serif;
 }
 
-.header_header_logo img
+.header_header_logo img/* The header logo part */
+
 {
-  margin-left: 20px;
-  margin-top: 10px;
-  width: 120px;
-  height: auto;
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 120px;
+	height: auto;
 }
 
-.header_header_navigation_bar
+.header_header_navigation_bar/* The header navigation part */
+
 {
 	display: flex;
 	list-style: none;
 	margin-right: 10px;
 }
 
-.header_header_navigation a
+.header_header_navigation a/* The header navigation part */
+
 {
 	color: white;
 	font-size: 20px;
@@ -64,32 +83,36 @@ button:hover
 	transition: all 0.2s;
 }
 
-.header_header_navigation a:hover
+.header_header_navigation a:hover/* The header navigation part */
+
 {
 	font-weight: bold;
 }
 
-/* Best movie */
-.best_best
+.best_best/* The best movies part */
+
 {
 	background-image: url(images/pexels-cottonbro-9665187.jpg);
 	background-size: cover;
 	padding: 150px 200px 180px 200px;
 }
 
-.best_best_movie_title
+.best_best_movie_title/* The best movies title part */
+
 {
 	font-size: 45px;
 	font-family: "Netflix Sans", sans-serif;
 }
 
-.best_best_button
+.best_best_button/* The best movies button part */
+
 {
 	font-size: 18px;
 	width: 120px;
 }
 
-.best_best_movie_description p
+.best_best_movie_description p/* The best movies description part */
+
 {
 	font-style: italic;
 	line-height: 180%;
@@ -97,7 +120,8 @@ button:hover
 	margin-top: 3%;
 }
 
-.best_best_cover img
+.best_best_cover img/* The best movies cover part */
+
 {
 	border-radius: 10px;
 	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
@@ -107,8 +131,8 @@ button:hover
 	width: 40%;
 }
 
-/* Categories */
-.categories_categories
+.categories_categories/* The categories part */
+
 {
 	align-items: center;
 	background: linear-gradient(#222222, #111111);
@@ -117,8 +141,8 @@ button:hover
 	justify-content: center;
 }
 
-/* Modal */
-.modal_modal
+.modal_modal/* The modal part */
+
 {
 	background-color: rgba(0, 0, 0, 0.8);
 	display: none;
@@ -128,7 +152,8 @@ button:hover
 	width: 100%;
 }
 
-.modal_modal_content
+.modal_modal_content/* The modal content part */
+
 {
 	background-color: #222222;
 	border-radius: 10px;
@@ -139,7 +164,8 @@ button:hover
 	width: 80%;
 }
 
-.modal_modal_cover_image img
+.modal_modal_cover_image img/* The modal cover part */
+
 {
 	border-radius: 10px;
 	box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.4);
@@ -149,94 +175,104 @@ button:hover
 	margin-top: 1%;
 }
 
-.modal_modal_content h3
+.modal_modal_content h3/* The modal content h3 part */
+
 {
 	display: inline-block;
 	font-size: 32px;
 }
 
-.modal_modal_button
+.modal_modal_button/* The modal button part */
+
 {
 	font-size: 14px;
 	margin-left: 30px;
 	width: 80px;
 }
 
-.modal_modal_movie_information
+.modal_modal_movie_information/* The modal information part */
+
 {
 	font-size: 20px;
 	margin-left: 30px;
 	margin-right: 40%;
 }
 
-.modal_modal_metadata
+.modal_modal_metadata/* The modal metadata part */
+
 {
 	font-weight: bold;
 }
 
-.modal_modal_content p
+.modal_modal_content p/* The modal content p part */
+
 {
 	display: inline;
 	line-height: 150%;
 }
 
-.modal_modal_genres, strong
+.modal_modal_genres, strong/* The modal genres part */
+
 {
 	color: #caaa76;
 }
 
-.modal_modal_summary
+.modal_modal_summary/* The modal summary part */
+
 {
 	font-style: italic;
 }
 
-.modal_modal_close
+.modal_modal_close/* The modal closing part */
+
 {
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.modal_modal_close:hover, .modal_modal_close:focus
+.modal_modal_close:hover, .modal_modal_close:focus/* The modal other closing part */
+
 {
 	cursor: pointer;
 	text-decoration: none;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #111111;
-  color: #ffffff;
-  padding: 20px;
+.footer_footer /* The footer part */
+
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
-.footer_footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+.footer_footer nav /* The footer navigation part */
+
+{
+	margin-right: auto;
 }
 
-.footer_footer nav {
-  margin-right: auto;
+.footer_footer nav ul /* The footer navigation ul part */
+
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-.footer_footer nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.footer_footer nav li /* The footer navigation li part */
+
+{
+	display: inline-block;
+	margin-right: 20px;
 }
 
-.footer_footer nav li {
-  display: inline-block;
-  margin-right: 20px;
-}
+#modal-modal-footer /* The modal footer part */
 
-#modal-modal-footer {
-  height: 60px;
-  margin-left: auto;
+{
+	height: 60px;
+	margin-left: auto;
 }

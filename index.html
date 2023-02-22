@@ -1,89 +1,134 @@
 <!DOCTYPE html>
-<!--suppress HtmlUnknownAnchorTarget -->
+<!-- The language -->
 <html lang="en">
 	<head>
+		<!-- Container for metadata -->
 		<meta charset="UTF-8">
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<!-- Document metadata element -->
 		<link href="img/favicon-32x32.png" rel="icon"/>
 		<link href="css_js/css_main.css" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com" rel="preconnect">
 		<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
 		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<!-- Link element to external resources -->
 		<title>P6-JustStreamIt</title>
+		<!-- Defines the document's title that is shown in a browser's title bar -->
 	</head>
 	<body>
+		<!-- Contains all the contents of an HTML document -->
 		<header class="header_header">
+			<!-- Represents a container for introductory content or a set of navigational links-->
 			<div class="header_header_logo">
+				<!-- Content division -->
 				<a href="index.html"><img alt="project-logo" src="img/just-stream.png"></a>
+				<!-- Defines a hyperlink -->
 			</div>
 			<nav class="header_header_menu">
+				<!-- Defines a set of navigation links -->
 				<ul class="header_header_navigation_bar">
+					<!-- Bulleted list -->
 					<li class="header_header_nav"><a href="index.html">Home</a></li>
 					<li class="header_header_nav"><a href="#categories_categories">Categories</a></li>
+					<!-- Defines a list item -->
 				</ul>
 			</nav>
 		</header>
 		<section class="best_best" id="best_best_movie">
+			<!--Represents a generic section -->
 			<div class="best_best_cover" id="best_best_top0">
+				<!-- Content division -->
 				<img alt="film-cover" src="img/testing_img.jpg">
+				<!-- Used to embed an image -->
 			</div>
 			<div class="best_best_movie">
+				<!-- Content division -->
 				<h1 class="best_best_movie_title" id="best-best-top-title">""</h1>
+				<!-- Used to define HTML headings -->
 			</div>
 			<div class="best_best_buttons">
+				<!-- Content division -->
 				<button class="best_best_button"><i class="modal_modal_bi modal_modal_bi-play-fill"></i> Play</button>
 				<button aria-label="open the modal" class="best_best_button">More info</button>
+				<!-- Defines a clickable button -->
 			</div>
 			<div class="best_best_movie_description">
+				<!-- Content division -->
 				<p class="best_best_desc" id="best-best-top-desc">
+					<!-- Defines a paragraph -->
 					""
 				</p>
 			</div>
 		</section>
+		<!--Represents a generic section -->
 		<div class="carousels_carousels"></div>
 		<div class="modal_modal" id="modal-modal">
 			<div class="modal_modal_content">
+				<!-- Content division -->
 				<span aria-label="close the modal" class="modal_modal_close">&times;</span>
+				<!-- Inline container used to mark up a part of a text -->
 				<div class="modal_modal_cover_image">
+					<!-- Content division -->
 					<img alt="film-cover" id="modal-modal-cover" src="img/testing_img.jpg">
+					<!-- Used to embed an image -->
 				</div>
 				<div class="modal_modal_movie_information">
+					<!-- Content division -->
 					<header class="modal_modal_header">
+						<!-- Represents a container for introductory content or a set of navigational links-->
 						<h3 class="modal_modal_title" id="modal-modal-title">""</h3>
+						<!-- Used to define HTML headings -->
 						<button class="modal_modal_button"><i class="modal_modal_bi modal_modal_bi-play-fill"></i> Play</button>
+						<!-- Defines a clickable button -->
 					</header>
 					<div class="modal_modal_metadata">
+						<!-- Content division -->
 						<p id="modal-modal-year">
 							""
 						</p>
-						 •
+						•
 						<p id="modal-modal-rating">
 							""
 						</p>
-						 •
+						•
 						<p id="modal-modal-duration">
+							<!-- Defines a paragraph -->
 							""
 						</p>
 						<br>
+						<!-- Inserts a single line break -->
 						<p class="modal_modal_genres" id="modal-modal-genres">
+							<!-- Defines a paragraph -->
 							""
 						</p>
 						<br>
-						<strong>IMDb: </strong>
+						<!-- Inserts a single line break -->
+						<strong>
+							<!-- Gives text a strong emphasis -->
+							IMDb score:
+						</strong>
 						<p id="modal-modal-imdb">
+							<!-- Defines a paragraph -->
 							""
 						</p>
 						<br>
 						<br>
+						<!-- Inserts a single line break -->
 					</div>
 					<div>
+						<!--Content division -->
 						<strong>Directed by: </strong>
+						<!-- Gives text a strong emphasis -->
 						<p id="modal-modal-directors">
+							<!-- Defines a paragraph -->
 							""
 						</p>
 						<br>
+						<!-- Inserts a single line break -->
 						<strong>Starring: </strong>
+						<!-- Gives text a strong emphasis -->
 						<p id="modal-modal-cast">
+							<!-- Defines a paragraph -->
 							""
 						</p>
 						<br>
@@ -92,15 +137,22 @@
 							""
 						</p>
 						<br>
+						<!-- Inserts a single line break -->
 						<strong>Box office: </strong>
+						<!-- Gives text a strong emphasis -->
 						<p id="modal-modal-box-office">
+							<!-- Defines a paragraph -->
 							""
 						</p>
 						<br>
 						<br>
+						<!-- Inserts a single line break -->
 						<strong>Plot summary: </strong>
+						<!-- Gives text a strong emphasis -->
 						<br>
+						<!-- Inserts a single line break -->
 						<p class="modal_modal_summary" id="modal-modal-desc">
+							<!-- Defines a paragraph -->
 							""
 						</p>
 					</div>
@@ -108,18 +160,27 @@
 			</div>
 		</div>
 		<script src="css_js/js_main.js"></script>
+		<!-- Used to embed a client-side script (JavaScript) -->
 	</body>
-<footer>
-  <section class="footer_footer" id="footer-footer">
-    <nav>
-      <ul>
-        <li><a href="https://openclassrooms.com/fr/">OPENCLASSROOMS</a></li>
-      </ul>
-    </nav>
-    <p>✴ Florent SPRING</p>
-    <p>✴ P6 OPENCLASSROOMS</p>
-    <img src="img/just-stream.png" alt="project-logo" id="modal-modal-footer">
-  </section>
-</footer>
-
+	<footer>
+		<!-- Defines a footer for a document or section -->
+		<section class="footer_footer" id="footer-footer">
+			<!--Represents a generic section -->
+			<nav>
+				<!-- Defines a set of navigation links -->
+				<ul>
+					<!-- Bulleted list -->
+					<li><!-- Defines a list item --><a href="https://openclassrooms.com/fr/">OPENCLASSROOMS</a><!-- Defines a hyperlink --></li>
+				</ul>
+			</nav>
+			<p>
+				✴ Florent SPRING
+			</p>
+			<p>
+				<!-- Defines a paragraph -->
+				✴ P6 OPENCLASSROOMS
+			</p>
+			<img src="img/just-stream.png" alt="project-logo" id="modal-modal-footer">
+		</section>
+	</footer>
 </html>
