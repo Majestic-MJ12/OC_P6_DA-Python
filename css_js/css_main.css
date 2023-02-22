@@ -141,6 +141,138 @@ footer/* The footer part */
 	justify-content: center;
 }
 
+.categories_categories_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categories_categories_container h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.categories_categories_carousel_container {
+    display: flex;
+    align-items: center;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+}
+
+.categories_categories_carousel_content {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    transform: translateY(50%);
+    transition: all 0.7s ease;
+}
+
+.categories_categories_box {
+    margin-right: 50px;
+    width: 200px;
+    position: relative;
+}
+
+.categories_categories_box img {
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+.categories_categories_button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 48px;
+    height: 100%;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%) scale(0.5);
+    transition: all 0.2s ease;
+    visibility: hidden;
+    z-index: 1;
+    border: none;
+    outline: none;
+}
+
+.categories_categories_button.showing {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    visibility: visible;
+}
+
+.categories_categories_button.left {
+    left: 50px;
+}
+
+.categories_categories_button.right {
+    right: 50px;
+}
+
+
+/* Overlay */
+
+.categories_categories_overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.categories_categories_box:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+}
+
+.categories_categories_box:hover .overlay_overlay {
+    opacity: 1;
+}
+
+.categories_categories_overlay p {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.categories_categories_overlay_button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.categories_categories_overlay_button:hover {
+    background-color: #e50914;
+    color: #fff;
+}
+
 .modal_modal/* The modal part */
 
 {
