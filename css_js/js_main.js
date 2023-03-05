@@ -1,232 +1,233 @@
-const Url = "http://localhost:8000/api/v1/titles/"
+const mainUrlJS = "http://localhost:8000/api/v1/titles/"
 
 
 // Best movie part
 
-function fetchTheBestMovie() {
+function fetchBestMovieJS() {
 
-   let theBestTitle = document.getElementById('best-best-top-title');
-   let the_BestImage = document.getElementsByClassName('best_best_cover')[0].getElementsByTagName("img")[0];
-   let theBestDescription = document.getElementsByClassName('best_best_description')[0];
-   let theBestButton = document.getElementsByClassName('best_best_button')[1];
+    let bestTitleJS = document.getElementById('top-title_id');
+    let bestImgJS = document.getElementsByClassName('best-cover_cl')[0].getElementsByTagName("img")[0];
+    let bestDescriptionJS = document.getElementsByClassName('best-description_cl')[0];
+    let bestButtonJS = document.getElementsByClassName('button_cl')[1];
 
-   fetch(Url + "?sort_by=-imdb_score")
-      .then(response => response.json())
-      .then(data => {
-         theBestTitle.innerHTML = data["results"][0]["title"];
-         theBestImage.src = data["results"][0]["image_url"];
-         theBestButton.setAttribute("onclick", `openTheModal("${data["results"][0]["id"]}")`)
-         fetch(data["results"][0]["url"])
-            .then(response => response.json())
-            .then(data => {
-               theBestDescription.innerHTML = data["description"];
-            })
-      })
+    fetch(mainUrlJS + "?sort_by=-imdb_score")
+        .then(responseJS => responseJS.json())
+        .then(dataJS => {
+            bestTitleJS.innerHTML = dataJS["results"][0]["title"];
+            bestImgJS.src = dataJS["results"][0]["image_url"];
+            bestButtonJS.setAttribute("onclick", `openModalJS("${dataJS["results"][0]["id"]}")`)
+            fetch(dataJS["results"][0]["url"])
+                .then(responseJS => responseJS.json())
+                .then(dataJS => {
+                    bestDescriptionJS.innerHTML = dataJS["description"];
+                })
+        })
 
 }
+
 
 // Modal control
 
-function openTheModal(id) {
+function openModalJS(id_JS) {
 
-   let theModal = document.getElementById("modal-modal");
-   let theSpan = document.getElementsByClassName("modal_modal_close")[0];
+    let modalJS = document.getElementById("modal_id");
+    let spanJS = document.getElementsByClassName("close_cl")[0];
 
-   fetchTheModalData(id)
+    fetchModalDataJS(id_JS)
 
-   theModal.style.display = "block";
+    modalJS.style.display = "block";
 
-   theSpan.onclick = function () {
-      theModal.style.display = "none";
-   }
+    spanJS.onclick = function () {
+        modalJS.style.display = "none";
+    }
 
-   window.onclick = function (events) {
-      if (events.target === theModal)
-         theModal.style.display = "none";
-   }
+    window.onclick = function (event_JS) {
+        if (event_JS.target === modal_cl)
+            modalJS.style.display = "none";
+    }
 }
 
-function fetchTheModalData(id) {
+function fetchModalDataJS(id_JS) {
 
-   fetch(Url + id)
-      .then(response => response.json())
-      .then(data => {
+    fetch(mainUrlJS + id_JS)
+        .then(responseJS => responseJS.json())
+        .then(dataJS => {
 
-         document.getElementById('modal-modal-cover').src = data["image_url"];
-         document.getElementById('modal-modal-title').innerHTML = data["title"];
+            document.getElementById('modal-cover_id').src = dataJS["image_url"];
+            document.getElementById('modal-title_id').innerHTML = dataJS["title"];
 
-         document.getElementById('modal-modal-year').innerHTML = data["year"];
-         document.getElementById('modal-modal-duration').innerHTML = data["duration"] + " min";
-         document.getElementById('modal-modal-genres').innerHTML = data["genres"];
-         document.getElementById('modal-modal-imdb').innerHTML = data["imdb_score"] + " / 10";
+            document.getElementById('modal-year_id').innerHTML = dataJS["year"];
+            document.getElementById('modal-duration_id').innerHTML = dataJS["duration"] + " min";
+            document.getElementById('modal-genres_id').innerHTML = dataJS["genres"];
+            document.getElementById('modal-imdb_id').innerHTML = dataJS["imdb_score"] + " / 10";
 
-         document.getElementById('modal-modal-directors').innerHTML = data["directors"];
-         document.getElementById('modal-modal-cast').innerHTML = data["actors"] + "...";
-         document.getElementById('modal-modal-country').innerHTML = data["countries"];
+            document.getElementById('modal-directors_id').innerHTML = dataJS["directors"];
+            document.getElementById('modal-cast_id').innerHTML = dataJS["actors"] + "...";
+            document.getElementById('modal-country_id').innerHTML = dataJS["countries"];
 
 
-         if (typeof data["rated"] === 'string' || data["rated"] instanceof String)
-            document.getElementById('modal-modal-rating').innerHTML = data["rated"];
-         else
-            document.getElementById('modal-modal-rating').innerHTML = data["rated"] + "+";
+            if (typeof dataJS["rated"] === 'string' || dataJS["rated"] instanceof String)
+                document.getElementById('modal-rating_id').innerHTML = dataJS["rated"];
+            else
+                document.getElementById('modal-rating_id').innerHTML = dataJS["rated"] + "+";
 
-         let theModalBoxOffice = document.getElementById('modal-modal-box-office');
-         if (data["worldwide_gross_income"] == null)
-            theModalBoxOffice.innerHTML = "N/A"; // placeholder for unspecified box-office
-         else
-            theModalBoxOffice.innerHTML = data["worldwide_gross_income"] + " " + data["budget_currency"];
+            let modalBoxOfficeJS = document.getElementById('modal-box-office_id');
+            if (dataJS["worldwide_gross_income"] == null)
+                modalBoxOfficeJS.innerHTML = "N/A";
+            else
+                modalBoxOfficeJS.innerHTML = dataJS["worldwide_gross_income"] + " " + dataJS["budget_currency"];
 
-         let reExp = /[a-zA-Z]/g;
-         if (reExp.test(data["long_description"]))
-            document.getElementById('modal-modal-description').innerHTML = data["long_description"];
-         else
-            document.getElementById('modal-modal-description').innerHTML = "N/A";
-
-      })
+            let regExpJS = /[a-zA-Z]/g;
+            if (regExpJS.test(dataJS["long_description"]))
+                document.getElementById('modal-description_id').innerHTML = dataJS["long_description"];
+            else
+                document.getElementById('modal-description_id').innerHTML = "N/A";
+        })
 }
+
 
 // Categories
 
-async function fetchTheCategories(names, skipping, theTotal = 7) {
+async function fetchCategoriesJS(name_JS, skip_JS, total_JS = 7) {
 
-   const theResults = await fetch(Url + "?sort_by=-imdb_score&genre=" + names);
+    const resultsJS = await fetch(mainUrlJS + "?sort_by=-imdb_score&genre=" + name_JS);
 
-   if (!theResults.ok)
-      return
-   const theData = await theResults.json();
-   let theMoviesData = Array(...theData.theResults);
+    if (!resultsJS.ok)
+        return
+    const dataJS = await resultsJS.json();
+    let moviesDataJS = Array(...dataJS.results);
 
-   if (skip_it > 0)
-      theMoviesData.splice(0, skip_it);
+    if (skip_JS > 0)
+        moviesDataJS.splice(0, skip_JS);
 
-   if (theMoviesData.length < theTotal) {
-      let theResults2 = await (await fetch(theData.next)).json();
-      theMoviesData.push(...Array(...theResults2.theResults).slice(0, theTotal - theMoviesData.length));
-   }
+    if (moviesDataJS.length < total_JS) {
+        let results2JS = await (await fetch(dataJS.next)).json();
+        moviesDataJS.push(...Array(...results2JS.results).slice(0, total_JS - moviesDataJS.length));
+    }
 
-   return theMoviesData;
+    return moviesDataJS;
 }
 
 // The carousel controls part
 
-function movingTheCarouselOnLeft(categories) {
+function moveCarouselLeftJS(category_JS) {
 
-   let theCarrouselContent = document.querySelector("#" + categories + "-movies");
-   let theCarrouselLeftButton = document.querySelector("#" + categories + "-left");
-   let theCarrouselRightButton = document.querySelector("#" + categories + "-right");
+    let carrouselContentJS = document.querySelector("#" + category_JS + "-movies");
+    let carrouselLeftButtonJS = document.querySelector("#" + category_JS + "-left");
+    let carrouselRightButtonJS = document.querySelector("#" + category_JS + "-right");
 
-   theCarrouselContent.style.left = "-680px";
-   theCarrouselRightButton.classList.remove("showing");
-   theCarrouselLeftButton.classList.add("showing");
+    carrouselContentJS.style.left = "-680px";
+    carrouselRightButtonJS.classList.remove("showing");
+    carrouselLeftButtonJS.classList.add("showing");
 }
 
-function moveTheCarouselOnRight(categories) {
+function moveCarouselRightJS(category_JS) {
 
-   let theCarrouselContent = document.querySelector("#" + categories + "-movies");
-   let theCarrouselLeftButton = document.querySelector("#" + categories + "-left");
-   let theCarrouselRightButton = document.querySelector("#" + categories + "-right");
+    let carrouselContentJS = document.querySelector("#" + category_JS + "-movies");
+    let carrouselLeftButtonJS = document.querySelector("#" + category_JS + "-left");
+    let carrouselRightButtonJS = document.querySelector("#" + category_JS + "-right");
 
-   theCarrouselContent.style.left = "0px";
-   theCarrouselRightButton.classList.add("showing");
-   theCarrouselLeftButton.classList.remove("showing");
+    carrouselContentJS.style.left = "0px";
+    carrouselRightButtonJS.classList.add("showing");
+    carrouselLeftButtonJS.classList.remove("showing");
 }
 
-async function buildTheCarousel(categories, names, skipping = 0) {
+async function buildCarouselJS(category_JS, name_JS, skip_JS = 0) {
 
-   let categoryName = names;
-   if (names === "best")
-      categoryName = "";
+    let categoryNameJS = name_JS;
+    if (name_JS === "best_cl")
+        categoryNameJS = "";
 
-   const theSection = document.createElement("section")
-   theSection.classList.add("categories_categories")
+    const sectionJS = document.createElement("section")
+    sectionJS.classList.add("categories_cl")
 
-   const theCarousel = document.createElement('div');
-   theCarousel.classList.add('categories_categories_container');
+    const carouselJS = document.createElement('div');
+    carouselJS.classList.add('container_cl');
 
-   const theCategoryTitle = document.createElement('h2');
-   theCategoryTitle.innerHTML = `${categories} movies`;
-   theCarousel.append(theCategoryTitle);
+    const categoryTitleJS = document.createElement('h2');
+    categoryTitleJS.innerHTML = `${category_JS} movies`;
+    carouselJS.append(categoryTitleJS);
 
-   const theCarouselContainer = document.createElement('div');
-   theCarouselContainer.classList.add('categories_categories_carousel_container');
+    const carouselContainerJS = document.createElement('div');
+    carouselContainerJS.classList.add('carousel-container_cl');
 
-   const theCarouselContent = document.createElement('div');
-   theCarouselContent.classList.add('categories_categories_carousel_content');
-   theCarouselContent.setAttribute("id", `${names}-movies`)
+    const carouselContentJS = document.createElement('div');
+    carouselContentJS.classList.add('carousel-content_cl');
+    carouselContentJS.setAttribute("id", `${name_JS}-movies`)
 
-   document.querySelector('.carousels').appendChild(section);
+    document.querySelector('.carousels_cl').appendChild(sectionJS);
 
-   const theMovies = await fetchTheCategories(names, skipping);
+    const moviesJS = await fetchCategoriesJS(categoryNameJS, skip_JS);
 
-   let j = 0;
-   for (const theMovie of theMovies) {
-      const theBox = document.createElement('div');
-      theBox.classList.add("categories_categories_box");
-      theBox.setAttribute("id", `${categoryName}${j + 1}`);
+    let j = 0;
+    for (const movieJS of moviesJS) {
+        const boxJS = document.createElement('div');
+        boxJS.classList.add("box_cl");
+        boxJS.setAttribute("id", `${categoryNameJS}${j + 1}`);
 
-      const theMovieCover = document.createElement("img");
-      theMovieCover.setAttribute("alt", movie.title);
-      theMovieCover.src = movie.image_url;
-      theBox.appendChild(theMovieCover);
+        const movieCoverJS = document.createElement("img");
+        movieCoverJS.setAttribute("alt", movieJS.title);
+        movieCoverJS.src = movieJS.image_url;
+        boxJS.appendChild(movieCoverJS);
 
-      const theOverlay = document.createElement("div");
-      theOverlay.classList.add("categories_categories_overlay");
+        const overlayJS = document.createElement("div");
+        overlayJS.classList.add("overlay_cl");
 
-      const theMovieTitle = document.createElement("p");
-      theMovieTitle .innerHTML = movie.title;
-      theOverlay.appendChild(theMovieTitle);
+        const movieTitleJS = document.createElement("p");
+        movieTitleJS.innerHTML = movieJS.title;
+        overlayJS.appendChild(movieTitleJS);
 
-      const playingButton = document.createElement("button");
-      playingButton.classList.add("categories_categories_overlay_button");
-      playingButton.innerHTML = '<i class="modal_modal_bi modal_modal_bi-play-fill"></i> Play';
-      theOverlay.appendChild(playingButton);
+        const playButtonJS = document.createElement("button");
+        playButtonJS.classList.add("overlay-button_cl");
+        playButtonJS.innerHTML = '<i class="bi_cl bi-play-fill_cl"></i> Play';
+        overlayJS.appendChild(playButtonJS);
 
-      const theModalButton = document.createElement("button");
-      theModalButton.classList.add("overlay_overlay_button");
-      theModalButton.setAttribute("onclick", `openModal("${movie.id}")`);
-      theModalButton.innerHTML = "+++";
-      theOverlay.appendChild(modalButton);
+        const modalButtonJS = document.createElement("button");
+        modalButtonJS.classList.add("overlay-button_cl");
+        modalButtonJS.setAttribute("onclick", `openModalJS("${movieJS.id}")`);
+        modalButtonJS.innerHTML = "More information";
+        overlayJS.appendChild(modalButtonJS);
 
-      theBox.appendChild(theOverlay);
-      theCarouselContent.appendChild(theBox);
+        boxJS.appendChild(overlayJS);
+        carouselContentJS.appendChild(boxJS);
 
-      j++;
-   }
+        j++;
+    }
 
-   const theControls = document.createElement("div");
-   theControls.classList.add("categories_categories__controls");
+    const controlsJS = document.createElement("div");
+    controlsJS.classList.add("controls_cl");
 
-   const theLeftButton = document.createElement('button');
-   theLeftButton.classList.add('categories_categories_button');
-   theLeftButton.classList.add('left');
-   theLeftButton.setAttribute('aria-label', `${the_name} slide left`);
-   theLeftButton.setAttribute('id', `${the_name}-left`);
-   theLeftButton.setAttribute('onclick', `move_carousel_right("${the_name}")`);
-   theLeftButton.innerHTML = '<i class="modal_modal_bi bi_chevron_left"></i>';
-   theControls.appendChild(theLeftButton);
+    const leftButtonJS = document.createElement('button');
+    leftButtonJS.classList.add('button-added_cl');
+    leftButtonJS.classList.add('left-corner');
+    leftButtonJS.setAttribute('aria-label', `${name_JS} slide left`);
+    leftButtonJS.setAttribute('id', `${name_JS}-left`);
+    leftButtonJS.setAttribute('onclick', `moveCarouselRightJS("${name_JS}")`);
+    leftButtonJS.innerHTML = '<i class="bi_cl bi-chevron-left"></i>';
+    controlsJS.appendChild(leftButtonJS);
 
-   const theRightButton = document.createElement('button');
-   theRightButton.classList.add('categories_categories_button');
-   theRightButton.classList.add('right');
-   theRightButton.classList.add('showing');
-   theRightButton.setAttribute('id', `${the_name}-right`);
-   theRightButton.setAttribute('aria-label', `${name} slide right`);
-   theRightButton.setAttribute('onclick', `move_carousel_left("${the_name}")`);
-   theRightButton.innerHTML = '<i class="modal_modal_bi bi_chevron_right"></i>';
-   theControls.appendChild(theRightButton);
+    const rightButtonJS = document.createElement('button');
+    rightButtonJS.classList.add('button-added_cl');
+    rightButtonJS.classList.add('right-corner');
+    rightButtonJS.classList.add('showing');
+    rightButtonJS.setAttribute('id', `${name_JS}-right`);
+    rightButtonJS.setAttribute('aria-label', `${name_JS} slide right`);
+    rightButtonJS.setAttribute('onclick', `moveCarouselLeftJS("${name_JS}")`);
+    rightButtonJS.innerHTML = '<i class="bi_cl bi-chevron-right"></i>';
+    controlsJS.appendChild(rightButtonJS);
 
-   theCarouselContainer.appendChild(theCarouselContent);
-   theCarouselContainer.appendChild(theControls);
+    carouselContainerJS.appendChild(carouselContentJS);
+    carouselContainerJS.appendChild(controlsJS);
 
-   theCarousel.appendChild(theCarouselContainer);
-   section.appendChild(theCarousel);
+    carouselJS.appendChild(carouselContainerJS);
+    sectionJS.appendChild(carouselJS);
 }
 
 window.addEventListener('load', () => {
-   buildCarousel("Best-rated", "best", 1);
-   buildCarousel("Horror", "horror");
-   buildCarousel("History", "history");
-   buildCarousel("Romance", "romance");
+    buildCarouselJS("Best rated", "best_cl", 1);
+    buildCarouselJS("History", "history");
+    buildCarouselJS("Romance", "romance");
+    buildCarouselJS("Horror", "horror");
 
-   fetchTheBestMovie()
+    fetchBestMovieJS()
 });

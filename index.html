@@ -9,162 +9,158 @@
 		<link href="img/favicon-32x32.png" rel="icon"/>
 		<link href="css_js/css_main.css" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com" rel="preconnect">
-		<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Netflix+Sans&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet">
 		<!-- Link element to external resources -->
-		<title>P6-JustStreamIt</title>
+		<title>P6-JustStreamIt (OpenClassrooms)</title>
 		<!-- Defines the document's title that is shown in a browser's title bar -->
 	</head>
 	<body>
 		<!-- Contains all the contents of an HTML document -->
-		<header class="header_header">
+		<header class="header_cl">
 			<!-- Represents a container for introductory content or a set of navigational links-->
-			<div class="header_header_logo">
+			<div class="header-logo_cl">
 				<!-- Content division -->
-				<a href="index.html"><img alt="project-logo" src="img/just-stream.png"></a>
+				<a href="index.html"><img alt="logo" src="img/just-stream.png"></a>
 				<!-- Defines a hyperlink -->
 			</div>
-			<nav class="header_header_menu">
+			<nav class="header-menu_cl">
 				<!-- Defines a set of navigation links -->
-				<ul class="header_header_navigation_bar">
+				<ul class="navigation-bar_cl">
 					<!-- Bulleted list -->
-					<li class="header_header_nav"><a href="index.html">Home</a></li>
-					<li class="header_header_nav"><a href="#categories_categories">Categories</a></li>
+					<li class="navigation_cl"><a href="index.html">Home</a></li>
+					<li class="navigation_cl"><a href="#categories_cl">Categories</a></li>
 					<!-- Defines a list item -->
 				</ul>
 			</nav>
 		</header>
-		<section class="best_best" id="best_best_movie">
+		<section class="best_cl" id="best-movie_id">
 			<!--Represents a generic section -->
-			<div class="best_best_cover" id="best-best-top0">
+			<div class="best-cover_cl" id="top0_id">
 				<!-- Content division -->
-				<img alt="film-cover" src="img/testing_img.jpg">
+				<img alt="movie-cover" src="img/testing_img.png">
 				<!-- Used to embed an image -->
 			</div>
-			<div class="best_best_movie">
+			<div class="best-movie_cl">
 				<!-- Content division -->
-				<h1 class="best_best_movie_title" id="best-best-top-title">""</h1>
+				<h1 class="best-movie-title_cl" id="top-title_id">""</h1>
 				<!-- Used to define HTML headings -->
 			</div>
-			<div class="best_best_buttons">
+			<div class="buttons_cl">
 				<!-- Content division -->
-				<button class="best_best_button"><i class="modal_modal_bi modal_modal_bi-play-fill"></i> Play</button>
-				<button aria-label="open the modal" class="best_best_button">More info</button>
+				<button class="button_cl"><i class="bi_cl bi-play-fill_cl"></i> Play</button>
+				<button aria-label="open-modal" class="button_cl">More info</button>
 				<!-- Defines a clickable button -->
 			</div>
-			<div class="best_best_movie_description">
+			<div class="best-movie-description_cl">
 				<!-- Content division -->
-				<p class="best_best_description" id="best-best-top-description">
-					<!-- Defines a paragraph -->
+				<p class="best-description_cl" id="top-description_id">
 					""
 				</p>
+				<!-- Defines a paragraph -->
 			</div>
 		</section>
-		<!--Represents a generic section -->
-		<div class="carousels_carousels"></div>
-		<div class="modal_modal" id="modal-modal">
-			<div class="modal_modal_content">
+		<div class="carousels_cl"></div>
+		<div class="modal_cl" id="modal_id">
+			<div class="modal-content_cl">
 				<!-- Content division -->
-				<span aria-label="close the modal" class="modal_modal_close">&times;</span>
+				<span aria-label="close-modal" class="close_cl">&times;</span>
 				<!-- Inline container used to mark up a part of a text -->
-				<div class="modal_modal_cover_image">
+				<div class="modal-cover-image_cl">
 					<!-- Content division -->
-					<img alt="film-cover" id="modal-modal-cover" src="img/testing_img.jpg">
+					<img alt="movie-cover" id="modal-cover_id" src="img/testing_img.png">
 					<!-- Used to embed an image -->
 				</div>
-				<div class="modal_modal_movie_information">
+				<div class="modal-movie-information_cl">
 					<!-- Content division -->
-					<header class="modal_modal_header">
+					<header class="modal-header_cl">
 						<!-- Represents a container for introductory content or a set of navigational links-->
-						<h3 class="modal_modal_title" id="modal-modal-title">""</h3>
+						<h3 class="title_cl" id="modal-title_id">""</h3>
 						<!-- Used to define HTML headings -->
-						<button class="modal_modal_button"><i class="modal_modal_bi modal_modal_bi-play-fill"></i> Play</button>
+						<button class="modal-button_cl"><i class="bi_cl bi-play-fill_cl"></i> Play</button>
 						<!-- Defines a clickable button -->
 					</header>
-					<div class="modal_modal_metadata">
+					<div class="metadata_cl">
 						<!-- Content division -->
-						<p id="modal-modal-year">
+						<p id="modal-year_id">
 							""
 						</p>
-						•
-						<p id="modal-modal-rating">
+						 •
+						<p id="modal-rating_id">
 							""
 						</p>
-						•
-						<p id="modal-modal-duration">
-							<!-- Defines a paragraph -->
-							""
-						</p>
-						<br>
-						<!-- Inserts a single line break -->
-						<p class="modal_modal_genres" id="modal-modal-genres">
-							<!-- Defines a paragraph -->
+						 •
+						<p id="modal-duration_id">
 							""
 						</p>
 						<br>
-						<!-- Inserts a single line break -->
-						<strong>
-							<!-- Gives text a strong emphasis -->
-							IMDb score:
-						</strong>
-						<p id="modal-modal-imdb">
-							<!-- Defines a paragraph -->
+						<p class="genres_cl" id="modal-genres_id">
 							""
 						</p>
 						<br>
+						<strong>IMDb scoring: </strong>
+						<!-- Gives text a strong emphasis -->
+						<p id="modal-imdb_id">
+							""
+						</p>
+						<!-- Defines a paragraph -->
 						<br>
-						<!-- Inserts a single line break -->
+						<br>
+						<!-- Inserts a single line break (two here) -->
 					</div>
 					<div>
-						<!--Content division -->
+						<!-- Content division -->
 						<strong>Directed by: </strong>
 						<!-- Gives text a strong emphasis -->
-						<p id="modal-modal-directors">
-							<!-- Defines a paragraph -->
+						<p id="modal-directors_id">
 							""
 						</p>
 						<br>
-						<!-- Inserts a single line break -->
+						<!-- Defines a paragraph -->
 						<strong>Starring: </strong>
 						<!-- Gives text a strong emphasis -->
-						<p id="modal-modal-cast">
-							<!-- Defines a paragraph -->
+						<p id="modal-cast_id">
 							""
 						</p>
+						<!-- Defines a paragraph -->
 						<br>
+						<!-- Inserts a single line break -->
 						<strong>Countries: </strong>
-						<p id="modal-modal-country">
+						<!-- Gives text a strong emphasis -->
+						<p id="modal-country_id">
 							""
 						</p>
+						<!-- Defines a paragraph -->
 						<br>
 						<!-- Inserts a single line break -->
 						<strong>Box office: </strong>
 						<!-- Gives text a strong emphasis -->
-						<p id="modal-modal-box-office">
-							<!-- Defines a paragraph -->
+						<p id="modal-box-office_id">
 							""
 						</p>
+						<!-- Defines a paragraph -->
 						<br>
 						<br>
-						<!-- Inserts a single line break -->
-						<strong>Plot summary: </strong>
+						<!-- Inserts a single line break (two here) -->
+						<strong>Summary: </strong>
 						<!-- Gives text a strong emphasis -->
 						<br>
 						<!-- Inserts a single line break -->
-						<p class="modal_modal_summary" id="modal-modal-description">
-							<!-- Defines a paragraph -->
+						<p class="summary_cl" id="modal-description_id">
 							""
 						</p>
+						<!-- Defines a paragraph -->
 					</div>
 				</div>
 			</div>
 		</div>
-			<script src="css_js/js_main.js"></script>
+		<script src="css_js/js_main.js"></script>
 		<!-- Used to embed a client-side script (JavaScript) -->
 	</body>
 	<footer>
 		<!-- Defines a footer for a document or section -->
-		<section class="footer_footer" id="footer-footer">
+		<section class="footer_cl" id="footer_id">
 			<!--Represents a generic section -->
 			<nav>
 				<!-- Defines a set of navigation links -->
@@ -177,10 +173,11 @@
 				Florent SPRING ✴
 			</p>
 			<p>
-				<!-- Defines a paragraph -->
 				✴ P6 OPENCLASSROOMS
 			</p>
-			<img src="img/just-stream.png" alt="project-logo" id="modal-modal-footer">
+			<!-- Defines a paragraph -->
+			<img src="img/just-stream.png" alt="logo" id="modal-footer_id">
+			<!-- Used to embed an image -->
 		</section>
 	</footer>
 </html>
