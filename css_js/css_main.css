@@ -17,7 +17,7 @@ body
 /* The button part */
 button
 {
-	background-color: transparent;
+	background-color: white;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -36,6 +36,25 @@ button:hover
 	color: white;
 }
 
+#top-button_id {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #555; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#top-button_id:hover {
+  background-color: black; /* Add a dark-grey background on hover */
+}
+
+
 /* The header part */
 .header_cl
 {
@@ -52,8 +71,8 @@ button:hover
 /* The header logo part */
 .header-logo_cl img
 {
-	margin: 0px 0px 0px 30px;
-	width: 70%;
+	margin: 70px 0px 0px 30px;
+	width: 35%;
 }
 
 /* The header navigation part */
@@ -108,11 +127,16 @@ button:hover
 	font-weight: bold;
 	text-transform: uppercase;
 	padding: 10px 20px;
-	background-color: #E50914;
-	color: white;
+	background-color: white;
+	color: black;
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+.button_cl:hover
+{
+	background-color: #E50914;
 }
 
 /* The best movies description part */
@@ -182,12 +206,15 @@ button:hover
 	transform: translateY(-50%);
 	transition: all 0.7s ease;
 }
-.carousel-content_cl img {
-box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+
+.carousel-content_cl img
+{
+	box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
-.carousel-content_cl img:hover {
-transform: scale(1.05);
+.carousel-content_cl img:hover
+{
+	transform: scale(1.05);
 }
 
 /* The box part */
@@ -244,7 +271,7 @@ transform: scale(1.05);
 {
 	opacity: 0;
 	text-align: center;
-	transform: translate(10%, -180%);
+	transform: translate(10%, -150%);
 	transition: .5s ease;
 }
 
@@ -315,8 +342,8 @@ padding-bottom: 60px}
 /* The modal button part */
 .modal-button_cl
 {
-    background-color: #e50914;
-    color: #fff;
+	background-color: #e50914;
+	color: #fff;
 	font-size: 14px;
 	margin-left: 30px;
 	width: 80px;
@@ -346,7 +373,7 @@ padding-bottom: 60px}
 /* The modal genres part */
 .genres_cl, strong
 {
-	color: #caaa76;
+	color: #E50914;
 }
 
 /* The modal summary part */
@@ -372,9 +399,9 @@ padding-bottom: 60px}
 .footer_cl /* The footer part */
 
 {
-    background-color: #141414;
-    color: #fff;
-    padding: 50px;
+	background-color: #141414;
+	color: #fff;
+	padding: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -383,8 +410,9 @@ padding-bottom: 60px}
 	margin: 0 auto;
 }
 
-.footer_cl a {
-color: #fff;
+.footer_cl a
+{
+	color: #fff;
 }
 
 .footer_cl nav /* The footer navigation part */
