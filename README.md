@@ -40,3 +40,8 @@ Click on a movie to see more about it.
 
 Bootstrap icons
 JustStreamIt and OpenClassromms logo provided by OpenClassrooms
+Other image are from licence creative commons from google
+
+HTML and CSS Indent: https://www.tab-it.fr/
+JS indent: https://www.freeformatter.com/javascript-beautifier.html
+HTML and CSS validator: https://validator.w3.org/ and https://jigsaw.w3.org/css-validator/
