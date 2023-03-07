@@ -6,14 +6,14 @@
 		<meta charset="UTF-8">
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
 		<!-- Document metadata element -->
-		<link href="img/favicon-32x32.png" rel="icon"/>
-		<link href="css_js/css_main.css" rel="stylesheet"/>
+		<link href="img/favicon32x32.png" rel="icon">
+		<link href="css_js/css_main.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com" rel="preconnect">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Netflix+Sans&display=swap" rel="stylesheet">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet">
 		<!-- Link element to external resources -->
-		<title>P6-JustStreamIt (OpenClassrooms)</title>
+		<title>P6-JustStreamIt (OpenClassrooms / DA-Python)</title>
 		<!-- Defines the document's title that is shown in a browser's title bar -->
 	</head>
 	<body>
@@ -49,7 +49,7 @@
 			<div class="buttons_cl">
 				<!-- Content division -->
 				<button class="button_cl"><i class="bi_cl bi-play-fill_cl"></i> Play</button>
-				<button aria-label="open-modal" class="button_cl">More info</button>
+				<button class="button_cl">More info</button>
 				<!-- Defines a clickable button -->
 			</div>
 			<div class="best-movie-description_cl">
@@ -64,7 +64,7 @@
 		<div class="modal_cl" id="modal_id">
 			<div class="modal-content_cl">
 				<!-- Content division -->
-				<span aria-label="close-modal" class="close_cl">&times;</span>
+				<span class="close_cl">&times;</span>
 				<!-- Inline container used to mark up a part of a text -->
 				<div class="modal-cover-image_cl">
 					<!-- Content division -->
@@ -156,36 +156,35 @@
 		</div>
 		<script src="css_js/js_main.js"></script>
 		<!-- Used to embed a client-side script (JavaScript) -->
-	    <button onclick="topFunction()" id="top-button_id" title="Go-to-top"><i class="bi_cl bi-arrow-up-short"></i></button>
-
-    <!-- Include any necessary JavaScript code here -->
-    <script>
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
+		<button onclick="topFunction()" id="top-button_id" title="Go-to-top"><i class="bi_cl bi-arrow-up-short"></i></button>
+		<!-- Include any necessary JavaScript code here -->
+		<script>
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+		<footer>
+			<!-- Defines a footer for a document or section -->
+			<div class="footer_cl" id="footer_id">
+				<!--Represents a generic section -->
+				<nav>
+					<!-- Defines a set of navigation links -->
+					<ul>
+						<!-- Bulleted list -->
+						<li><!-- Defines a list item --><a href="https://openclassrooms.com/fr/">OPENCLASSROOMS</a><!-- Defines a hyperlink --></li>
+					</ul>
+				</nav>
+				<p>
+					Florent SPRING ✴
+				</p>
+				<p>
+					✴ P6 OPENCLASSROOMS DA-Python
+				</p>
+				<!-- Defines a paragraph -->
+				<img src="img/just-stream.png" alt="logo" id="modal-footer_id">
+				<!-- Used to embed an image -->
+			</div>
+		</footer>
 	</body>
-	<footer>
-		<!-- Defines a footer for a document or section -->
-		<section class="footer_cl" id="footer_id">
-			<!--Represents a generic section -->
-			<nav>
-				<!-- Defines a set of navigation links -->
-				<ul>
-					<!-- Bulleted list -->
-					<li><!-- Defines a list item --><a href="https://openclassrooms.com/fr/">OPENCLASSROOMS</a><!-- Defines a hyperlink --></li>
-				</ul>
-			</nav>
-			<p>
-				Florent SPRING ✴
-			</p>
-			<p>
-				✴ P6 OPENCLASSROOMS
-			</p>
-			<!-- Defines a paragraph -->
-			<img src="img/just-stream.png" alt="logo" id="modal-footer_id">
-			<!-- Used to embed an image -->
-		</section>
-	</footer>
 </html>
