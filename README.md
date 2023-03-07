@@ -27,7 +27,7 @@ First, setup and run the server:
 6- Run the server with ```$ python manage.py runserver```
 
 
-When the server is running after step 7 of the procedure, the OCMovies API can be requested from endpoints starting with the following base URL: http://localhost:8000/api/v1/titles/.
+When the server is running after step 6 of the procedure, the OCMovies API can be requested from endpoints starting with the following base URL: http://localhost:8000/api/v1/titles/.
 
 Steps 2 and 4-5 are only required for initial installation. For subsequent launches of the API, you only have to execute steps 3 and 6 from the root folder of the project.
 
