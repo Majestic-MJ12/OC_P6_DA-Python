@@ -42,6 +42,8 @@ Bootstrap icons
 
 JustStreamIt and OpenClassromms logo provided by OpenClassrooms
 
+API used in this project provided by OpenClassrooms: https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR
+
 Other image are from licence creative commons from google
 
 HTML and CSS Indent: https://www.tab-it.fr/
