@@ -9,7 +9,7 @@ body
 {
 	background-color: #000000;
 	color: white;
-	font-family: "Roboto", sans-serif;
+	font-family: "Netflix Sans", sans-serif;
 	margin: 0;
 	font-size: 16px;
 }
@@ -29,6 +29,7 @@ button
 	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
 }
 
+/* The button part when pointer is over it */
 button:hover
 {
 	background-color: #e50914;
@@ -36,36 +37,26 @@ button:hover
 	color: white;
 }
 
+/* The button to go back up the page */
 #top-button_id
 {
 	position: fixed;
-	/* Fixed/sticky position */
 	bottom: 20px;
-	/* Place the button at the bottom of the page */
 	right: 30px;
-	/* Place the button 30px from the right */
 	z-index: 99;
-	/* Make sure it does not overlap */
 	border: none;
-	/* Remove borders */
 	outline: none;
-	/* Remove outline */
 	background-color: #555;
-	/* Set a background color */
 	color: white;
-	/* Text color */
 	cursor: pointer;
-	/* Add a mouse pointer on hover */
 	padding: 15px;
-	/* Some padding */
 	border-radius: 10px;
-	/* Rounded corners */
 }
 
+/* The button to go back up the page when pointer is over it */
 #top-button_id:hover
 {
 	background-color: black;
-	/* Add a dark-grey background on hover */
 }
 
 /* The header part */
@@ -96,6 +87,7 @@ button:hover
 	margin-right: 10px;
 }
 
+/* The link navigation part */
 .navigation_cl a
 {
 	color: white;
@@ -107,6 +99,7 @@ button:hover
 	text-transform: uppercase;
 }
 
+/* The link navigation part when pointer is over it */
 .navigation_cl a:hover
 {
 	color: #e50914;
@@ -116,7 +109,6 @@ button:hover
 /* The best movies part */
 .best_cl
 {
-	background-image: url(images/pexels-cottonbro-9665187.jpg);
 	background-size: cover;
 	padding: 150px 200px 180px 200px;
 }
@@ -147,6 +139,7 @@ button:hover
 	cursor: pointer;
 }
 
+/* The best movies button part when pointer is over it */
 .button_cl:hover
 {
 	background-color: #E50914;
@@ -189,6 +182,7 @@ button:hover
 	width: 1200px;
 }
 
+/* The container title part */
 .container_cl h2
 {
 	font-family: 'Netflix Sans', sans-serif;
@@ -199,7 +193,7 @@ button:hover
 	margin-bottom: 20px;
 }
 
-/* The carrousel part */
+/* The carousel part */
 .carousel-container_cl
 {
 	align-items: center;
@@ -209,6 +203,7 @@ button:hover
 	position: relative;
 }
 
+/* The content's carousel part */
 .carousel-content_cl
 {
 	bottom: -390px;
@@ -220,14 +215,52 @@ button:hover
 	transition: all 0.7s ease;
 }
 
+/* The content's carousel image part */
 .carousel-content_cl img
 {
 	box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
+/* The content's carousel image part when the pointer is over it */
 .carousel-content_cl img:hover
 {
 	transform: scale(1.05);
+}
+
+/* The carousel button part */
+.button-added_cl
+{
+	background-color: #e50914;
+	color: #fff;
+	font-size: 36px;
+	height: 370px;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	transform: translateY(-50%) scale(0.5);
+	transition: all 0.05s ease;
+	visibility: hidden;
+	width: 40px;
+}
+
+/* The carousel button part when it's visible */
+.button-added_cl.showing
+{
+	opacity: 1;
+	transform: translateY(-50%) scale(1);
+	visibility: visible;
+}
+
+/* The carousel button added on the left */
+.button-added_cl.left-corner
+{
+	left: 0;
+}
+
+/* The carousel button added on the right */
+.button-added_cl.right-corner
+{
+	right: 0;
 }
 
 /* The box part */
@@ -246,37 +279,16 @@ button:hover
 	width: 240px;
 }
 
-/* The carrousel button part */
-.button-added_cl
+/* The box image part when pointer is over it */
+.box_cl:hover img
 {
-	background-color: #e50914;
-	color: #fff;
-	font-size: 36px;
-	height: 370px;
-	opacity: 0;
-	padding: 0;
-	position: absolute;
-	transform: translateY(-50%) scale(0.5);
-	transition: all 0.05s ease;
-	visibility: hidden;
-	width: 40px;
+	opacity: 0.2;
 }
 
-.button-added_cl.showing
+/* The box part whe pointer is over it, in the overlay */
+.box_cl:hover .overlay_cl
 {
 	opacity: 1;
-	transform: translateY(-50%) scale(1);
-	visibility: visible;
-}
-
-.button-added_cl.left-corner
-{
-	left: 0;
-}
-
-.button-added_cl.right-corner
-{
-	right: 0;
 }
 
 /* The overlay part */
@@ -288,22 +300,14 @@ button:hover
 	transition: .5s ease;
 }
 
-.box_cl:hover img
-{
-	opacity: 0.2;
-}
-
-.box_cl:hover .overlay_cl
-{
-	opacity: 1;
-}
-
+/* The overlay text part */
 .overlay_cl p
 {
 	font-size: 15px;
 	font-weight: bold;
 padding-bottom: 60px}
 
+/* The overlay button part */
 .overlay-button_cl
 {
 	font-size: 13px;
@@ -345,7 +349,7 @@ padding-bottom: 60px}
 	margin-top: 1%;
 }
 
-/* The modal content h3 part */
+/* The modal content title part */
 .modal-content_cl h3
 {
 	display: inline-block;
@@ -376,7 +380,7 @@ padding-bottom: 60px}
 	font-weight: bold;
 }
 
-/* The modal content p part */
+/* The modal content text part */
 .modal-content_cl p
 {
 	display: inline;
@@ -403,14 +407,15 @@ padding-bottom: 60px}
 	font-weight: bold;
 }
 
+/* The modal closing part when pinter over it */
 .close_cl:hover, .close_cl:focus
 {
 	cursor: pointer;
 	text-decoration: none;
 }
 
-.footer_cl /* The footer part */
-
+/* The footer part */
+.footer_cl
 {
 	background-color: #141414;
 	color: #fff;
@@ -423,34 +428,35 @@ padding-bottom: 60px}
 	margin: 0 auto;
 }
 
+/* The footer link part */
 .footer_cl a
 {
 	color: #fff;
 }
 
-.footer_cl nav /* The footer navigation part */
-
+/* The footer navigation part */
+.footer_cl nav
 {
 	margin-right: auto;
 }
 
-.footer_cl nav ul /* The footer navigation ul part */
-
+/* The footer navigation ul part */
+.footer_cl nav ul
 {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-.footer_cl nav li /* The footer navigation li part */
-
+/* The footer navigation li part */
+.footer_cl nav li
 {
 	display: inline-block;
 	margin-right: 30px;
 }
 
-#modal-footer_id /* The modal footer part */
-
+/* The modal footer part */
+#modal-footer_id
 {
 	height: 60px;
 	margin-left: auto;
