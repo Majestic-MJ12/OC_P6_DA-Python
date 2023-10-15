@@ -51,3 +51,7 @@ HTML and CSS Indent: https://www.tab-it.fr/
 JS indent: https://www.freeformatter.com/javascript-beautifier.html
 
 HTML and CSS validator: https://validator.w3.org/ and https://jigsaw.w3.org/css-validator/
+
+# LICENSE
+
+GNU AFFERO GENERAL PUBLIC LICENSE
